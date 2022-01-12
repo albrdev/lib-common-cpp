@@ -29,8 +29,8 @@ target_link_libraries(${UNITTEST_COMMON} gtest_main gmock_main)
 # Traverse directories
 add_subdirectory(src)
 
-set(PROJECT_TEST unit_testsuite)
-set(EXECUTABLE_TEST unit_testsuite)
+set(PROJECT_TEST unit_testsuite-common)
+set(EXECUTABLE_TEST unit_testsuite-common)
 
 project(${PROJECT_TEST})
 
