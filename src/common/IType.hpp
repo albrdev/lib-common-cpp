@@ -8,6 +8,25 @@ class IType
   public:
   virtual const std::type_info& GetType() const final { return typeid(*this); }
 
+  template<class T>
+  bool IsType() const
+  {
+    const T* tmp = dynamic_cast<const T*>(this);
+    return tmp != nullptr;
+  }
+
+  template<class T>
+  const T* AsType() const
+  {
+    return dynamic_cast<const T*>(this);
+  }
+
+  template<class T>
+  T* AsType()
+  {
+    return dynamic_cast<T*>(this);
+  }
+
   virtual ~IType() = default;
 
   protected:
