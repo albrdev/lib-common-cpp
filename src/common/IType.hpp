@@ -6,7 +6,7 @@
 class IType
 {
   public:
-  virtual const std::type_info& GetType() const final { return typeid(*this); }
+  virtual const std::type_info& GetTypeInfo() const final { return typeid(*this); }
 
   template<class T>
   bool IsType() const
@@ -16,13 +16,25 @@ class IType
   }
 
   template<class T>
-  const T* AsType() const
+  const T& AsReference() const
+  {
+    return dynamic_cast<const T&>(*this);
+  }
+
+  template<class T>
+  T& AsReference()
+  {
+    return dynamic_cast<T&>(*this);
+  }
+
+  template<class T>
+  const T* AsPointer() const
   {
     return dynamic_cast<const T*>(this);
   }
 
   template<class T>
-  T* AsType()
+  T* AsPointer()
   {
     return dynamic_cast<T*>(this);
   }
