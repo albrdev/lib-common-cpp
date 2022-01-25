@@ -5,6 +5,7 @@ target_sources(${LIBRARY_COMMON}
     IType.hpp
     IOutput.hpp
     IObject.hpp
+    IIdentifiable.hpp
     IDescriptable.hpp
     Version.hpp
 
