@@ -3,6 +3,7 @@
 #include <typeinfo>
 
 using namespace ::testing;
+using namespace Common;
 
 namespace UnitTest
 {

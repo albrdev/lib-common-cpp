@@ -1,20 +1,23 @@
-#ifndef __IOBJECT_HPP__
-#define __IOBJECT_HPP__
+#ifndef __COMMON__IOBJECT_HPP__
+#define __COMMON__IOBJECT_HPP__
 
 #include "IType.hpp"
 #include "IPrintable.hpp"
 
-class IObject : public IType, public IPrintable
+namespace Common
 {
-  public:
-  virtual ~IObject() override = default;
+  class IObject : public IType, public IPrintable
+  {
+    public:
+    virtual ~IObject() override = default;
 
-  protected:
-  IObject() = default;
+    protected:
+    IObject() = default;
 
-  private:
-  IObject(const IObject&) = delete;
-  IObject& operator=(const IObject&) = delete;
-};
+    private:
+    IObject(const IObject&) = delete;
+    IObject& operator=(const IObject&) = delete;
+  };
+} // namespace Common
 
-#endif // __IOBJECT_HPP__
+#endif // __COMMON__IOBJECT_HPP__

@@ -1,22 +1,25 @@
-#ifndef __IDESCRIPTABLE_HPP__
-#define __IDESCRIPTABLE_HPP__
+#ifndef __COMMON__IDESCRIPTABLE_HPP__
+#define __COMMON__IDESCRIPTABLE_HPP__
 
 #include <string>
 
-class IDescriptable
+namespace Common
 {
-  public:
-  virtual std::string GetName()        = 0;
-  virtual std::string GetDescription() = 0;
+  class IDescriptable
+  {
+    public:
+    virtual std::string GetName()        = 0;
+    virtual std::string GetDescription() = 0;
 
-  virtual ~IDescriptable() = default;
+    virtual ~IDescriptable() = default;
 
-  protected:
-  IDescriptable() = default;
+    protected:
+    IDescriptable() = default;
 
-  private:
-  IDescriptable(const IDescriptable&) = delete;
-  IDescriptable& operator=(const IDescriptable&) = delete;
-};
+    private:
+    IDescriptable(const IDescriptable&) = delete;
+    IDescriptable& operator=(const IDescriptable&) = delete;
+  };
+} // namespace Common
 
-#endif // __IDESCRIPTABLE_HPP__
+#endif // __COMMON__IDESCRIPTABLE_HPP__

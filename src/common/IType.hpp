@@ -1,52 +1,55 @@
-#ifndef __ITYPE_HPP__
-#define __ITYPE_HPP__
+#ifndef __COMMON__ITYPE_HPP__
+#define __COMMON__ITYPE_HPP__
 
 #include <typeinfo>
 
-class IType
+namespace Common
 {
-  public:
-  virtual const std::type_info& GetTypeInfo() const final { return typeid(*this); }
-
-  template<class T>
-  bool IsType() const
+  class IType
   {
-    const T* tmp = dynamic_cast<const T*>(this);
-    return tmp != nullptr;
-  }
+    public:
+    virtual const std::type_info& GetTypeInfo() const final { return typeid(*this); }
 
-  template<class T>
-  const T& AsReference() const
-  {
-    return dynamic_cast<const T&>(*this);
-  }
+    template<class T>
+    bool IsType() const
+    {
+      const T* tmp = dynamic_cast<const T*>(this);
+      return tmp != nullptr;
+    }
 
-  template<class T>
-  T& AsReference()
-  {
-    return dynamic_cast<T&>(*this);
-  }
+    template<class T>
+    const T& AsReference() const
+    {
+      return dynamic_cast<const T&>(*this);
+    }
 
-  template<class T>
-  const T* AsPointer() const
-  {
-    return dynamic_cast<const T*>(this);
-  }
+    template<class T>
+    T& AsReference()
+    {
+      return dynamic_cast<T&>(*this);
+    }
 
-  template<class T>
-  T* AsPointer()
-  {
-    return dynamic_cast<T*>(this);
-  }
+    template<class T>
+    const T* AsPointer() const
+    {
+      return dynamic_cast<const T*>(this);
+    }
 
-  virtual ~IType() = default;
+    template<class T>
+    T* AsPointer()
+    {
+      return dynamic_cast<T*>(this);
+    }
 
-  protected:
-  IType() = default;
+    virtual ~IType() = default;
 
-  private:
-  IType(const IType&) = delete;
-  IType& operator=(const IType&) = delete;
-};
+    protected:
+    IType() = default;
 
-#endif // __ITYPE_HPP__
+    private:
+    IType(const IType&) = delete;
+    IType& operator=(const IType&) = delete;
+  };
+} // namespace Common
+
+#endif // __COMMON__ITYPE_HPP__

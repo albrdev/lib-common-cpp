@@ -1,26 +1,29 @@
-#ifndef __IOUTPUT_HPP__
-#define __IOUTPUT_HPP__
+#ifndef __COMMON__IOUTPUT_HPP__
+#define __COMMON__IOUTPUT_HPP__
 
 #include <string>
 #include <ostream>
 
-class IOutput
+namespace Common
 {
-  public:
-  friend std::ostream& operator<<(std::ostream& stream, const IOutput& object);
+  class IOutput
+  {
+    public:
+    friend std::ostream& operator<<(std::ostream& stream, const IOutput& object);
 
-  virtual std::string ToString() const { return typeid(*this).name(); }
+    virtual std::string ToString() const { return typeid(*this).name(); }
 
-  virtual ~IOutput() = default;
+    virtual ~IOutput() = default;
 
-  protected:
-  IOutput() = default;
+    protected:
+    IOutput() = default;
 
-  private:
-  IOutput(const IOutput&) = delete;
-  IOutput& operator=(const IOutput&) = delete;
-};
+    private:
+    IOutput(const IOutput&) = delete;
+    IOutput& operator=(const IOutput&) = delete;
+  };
 
-inline std::ostream& operator<<(std::ostream& stream, const IOutput& object) { return stream << object.ToString(); }
+  inline std::ostream& operator<<(std::ostream& stream, const IOutput& object) { return stream << object.ToString(); }
+} // namespace Common
 
-#endif // __IOUTPUT_HPP__
+#endif // __COMMON__IOUTPUT_HPP__
