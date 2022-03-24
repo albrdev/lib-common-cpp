@@ -7,6 +7,7 @@ target_sources(${LIBRARY_COMMON}
   IObject.hpp
   IIdentifiable.hpp
   IDescriptable.hpp
+  ICallback.hpp
 
   PRIVATE
 )
@@ -14,4 +15,5 @@ target_sources(${LIBRARY_COMMON}
 target_sources(${UNITTEST_COMMON}
   PRIVATE
   IType.test.cpp
+  ICallback.test.cpp
 )
