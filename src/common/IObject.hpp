@@ -1,12 +1,12 @@
 #ifndef __COMMON__IOBJECT_HPP__
 #define __COMMON__IOBJECT_HPP__
 
-#include "IPrintable.hpp"
+#include "IOutput.hpp"
 #include "IType.hpp"
 
 namespace Common
 {
-  class IObject : public IType, public IPrintable
+  class IObject : public IType, public IOutput
   {
     public:
     virtual ~IObject() override = default;
