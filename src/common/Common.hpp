@@ -1,6 +1,8 @@
 #ifndef __COMMON__COMMON_HPP__
 #define __COMMON__COMMON_HPP__
 
+#include <functional>
+
 namespace Common
 {
   template<typename T, typename... U>
