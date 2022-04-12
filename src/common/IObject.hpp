@@ -1,8 +1,8 @@
 #ifndef __COMMON__IOBJECT_HPP__
 #define __COMMON__IOBJECT_HPP__
 
-#include "IType.hpp"
 #include "IPrintable.hpp"
+#include "IType.hpp"
 
 namespace Common
 {

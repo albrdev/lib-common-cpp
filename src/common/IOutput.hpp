@@ -1,8 +1,8 @@
 #ifndef __COMMON__IOUTPUT_HPP__
 #define __COMMON__IOUTPUT_HPP__
 
-#include <string>
 #include <ostream>
+#include <string>
 
 namespace Common
 {

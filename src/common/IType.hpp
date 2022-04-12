@@ -1,8 +1,8 @@
 #ifndef __COMMON__ITYPE_HPP__
 #define __COMMON__ITYPE_HPP__
 
-#include <typeinfo>
 #include <type_traits>
+#include <typeinfo>
 
 namespace Common
 {

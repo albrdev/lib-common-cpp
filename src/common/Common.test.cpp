@@ -1,6 +1,8 @@
-#include <gtest/gtest.h>
 #include "Common.hpp"
+
 #include <functional>
+
+#include <gtest/gtest.h>
 
 using namespace ::testing;
 using namespace Common;

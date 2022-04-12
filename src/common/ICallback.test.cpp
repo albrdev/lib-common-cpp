@@ -1,5 +1,6 @@
-#include <gtest/gtest.h>
 #include "ICallback.hpp"
+
+#include <gtest/gtest.h>
 
 using namespace ::testing;
 using namespace Common;

@@ -1,6 +1,8 @@
-#include <gtest/gtest.h>
 #include "IType.hpp"
+
 #include <typeinfo>
+
+#include <gtest/gtest.h>
 
 using namespace ::testing;
 using namespace Common;
