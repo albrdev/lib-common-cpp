@@ -1,5 +1,5 @@
-#ifndef __IIDENTIFIABLE_HPP__
-#define __IIDENTIFIABLE_HPP__
+#ifndef __COMMON__IIDENTIFIABLE_HPP__
+#define __COMMON__IIDENTIFIABLE_HPP__
 
 namespace Common
 {
@@ -15,9 +15,9 @@ namespace Common
     IIdentifiable() = default;
 
     private:
-    IIdentifiable(const IIdentifiable&) = delete;
+    IIdentifiable(const IIdentifiable&)            = delete;
     IIdentifiable& operator=(const IIdentifiable&) = delete;
   };
 } // namespace Common
 
-#endif // __IIDENTIFIABLE_HPP__
+#endif // __COMMON__IIDENTIFIABLE_HPP__
