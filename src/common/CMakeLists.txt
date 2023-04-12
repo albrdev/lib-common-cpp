@@ -10,6 +10,10 @@ target_sources(${LIBRARY_COMMON}
   IIdentifiable.hpp
   IDescriptable.hpp
   ICallback.hpp
+  PropertyBase.hpp
+  GetProperty.hpp
+  SetProperty.hpp
+  FullProperty.hpp
 
   PRIVATE
 )
@@ -19,4 +23,7 @@ target_sources(${UNITTEST_COMMON}
   Common.test.cpp
   IType.test.cpp
   ICallback.test.cpp
+  GetProperty.test.cpp
+  SetProperty.test.cpp
+  FullProperty.test.cpp
 )
