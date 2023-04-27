@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 
 target_sources(${LIBRARY_COMMON}
   PUBLIC
+  TypeTraits.hpp
   Common.hpp
   IEquals.hpp
   IType.hpp
