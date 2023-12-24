@@ -3,6 +3,8 @@
 
 #include <functional>
 
+#define ARRAY_SIZE(var) (sizeof(var) / sizeof(*(var)))
+
 namespace Common
 {
   template<typename T, typename... U>
