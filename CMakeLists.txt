@@ -11,6 +11,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(LIBRARY_COMMON common)
 set(UNITTEST_COMMON common-test)
 
+if(TARGET ${LIBRARY_COMMON})
+    return()
+endif()
+
 project(lib-common VERSION 1.0.0)
 
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
